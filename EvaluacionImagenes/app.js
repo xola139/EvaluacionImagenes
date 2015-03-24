@@ -29,6 +29,14 @@ app.get('/', function(req, res){
   res.render('index', { title: 'Dibujemos' });
 });
 
+app.get('/evalua', function(req, res){
+	  res.render('evalua', { title: 'Drag an droped' });
+	});
+
+app.get('/evalua2', function(req, res){
+	  res.render('evalua2', { title: 'Drag an droped' });
+	});
+
 io.set('log level', 1);
 
 // Escuchamos conexiones entrantes

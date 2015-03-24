@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>jQuery UI Droppable - Revert draggable position</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <style>
+  #draggable, #draggable2 { width: 50px; height: 50px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; }
+  #droppable { width: 450px; height: 450px; padding: 0.5em; float: left; margin: 10px; }
+  </style>
+  <script>
+  $(function() {
+    $( "#draggable" ).draggable({ revert: "valid" });
+    $( "#draggable2" ).draggable({ revert: "invalid",
+    								snap:true,
+    								helper: 'clone'
+    							   });
+ 
+    $( "#droppable" ).droppable({
+      activeClass: "ui-state-default",
+      hoverClass: "ui-state-hover",
+      helper: "clone",
+      drop: function( event, ui ) {
+      
+      /* $(this).find("p").html("Dropped!");
+        var drg = ui.draggable.clone()
+        drg.resizable();
+        drg.draggable({revert: 'invalid', helper: 'clone', snap: "#drop_here td", opacity: 0.7});
+        $(this).append(drg);
+      */
+      
+      
+      
+        $(this)
+          .addClass( "ui-state-highlight" )
+          .find( "p" )
+            .html( "Dropped!" );
+      }
+    });
+  });
+  </script>
+</head>
+<body>
+ 
+<div id="draggable" class="ui-widget-content">
+  <p>dropped</p>
+</div>
+ 
+<div id="draggable2" class="ui-widget-content">
+  <p>not dropped</p>
+</div>
+ 
+<div id="droppable" class="ui-widget-header">
+  <p>Drop me here</p>
+</div>
+ 
+ 
+</body>
+</html>
