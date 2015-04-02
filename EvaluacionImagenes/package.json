@@ -10,5 +10,8 @@
     "ejs": "*",
     "stylus": "*",
     "socket.io": "~0.9.16"
+  },
+  "devDependencies": {
+    "connect-livereload": "^0.5.3"
   }
 }

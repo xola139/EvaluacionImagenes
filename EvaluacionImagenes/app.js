@@ -14,7 +14,7 @@ var server = http.createServer(app);
 io = io.listen(server);
 
 // all environments
-app.set('port', process.env.PORT || 3001);
+app.set('port', process.env.PORT || 3002);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use(require('stylus').middleware(path.join(__dirname, 'public')));
@@ -36,6 +36,11 @@ app.get('/evalua', function(req, res){
 app.get('/evalua2', function(req, res){
 	  res.render('evalua2', { title: 'Drag an droped' });
 	});
+
+app.get('/evaluados', function(req, res){
+	  res.render('evaluados', { title: 'Drag an droped' });
+	});
+
 
 io.set('log level', 1);
 
