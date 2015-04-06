@@ -4,7 +4,13 @@ $(document).ready(function(){
         
     
         //Make element draggable
-        $(".drag").draggable(/*{
+        $(".drag").draggable(
+        		{
+                    containment: "#frame",
+                    scroll: false
+        		}
+        		
+        		/*{
             helper:'clone',
             containment: 'frame',
 
