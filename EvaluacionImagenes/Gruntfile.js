@@ -26,7 +26,9 @@ express: {
 
   watch: {
       project: {
-        files: ['public/javascripts/*.js', 'public/stylesheets/*.css','views/*.ejs'],
+        files: ['public/javascripts/*.js', 
+                'public/stylesheets/*.css',
+                'views/*.ejs'],
         options: {
           livereload: true
         },

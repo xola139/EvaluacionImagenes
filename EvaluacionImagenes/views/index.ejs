@@ -5,6 +5,24 @@
   <title>Dibujemos</title>
   <link rel="stylesheet" href="stylesheets/style.css">
   <link rel="stylesheet" type="text/css" href="http://cdnplacona.appspot.com/files/drag_drop/example/stylesheets/style.css" media="all" />
+
+
+ <style>
+  #gallery { float: left; width: 65%; min-height: 12em; }
+  .gallery.custom-state-active { background: #eee; }
+  .gallery li { float: left; width: 96px; padding: 0.4em; margin: 0 0.4em 0.4em 0; text-align: center; }
+  .gallery li h5 { margin: 0 0 0.4em; cursor: move; }
+  .gallery li a { float: right; }
+  .gallery li a.ui-icon-zoomin { float: left; }
+  .gallery li img { width: 100%; cursor: move; }
+ 
+  #trash { float: right; width: 32%; min-height: 18em; padding: 1%; background:aqua}
+  #trash h4 { line-height: 16px; margin: 0 0 0.4em; }
+  #trash h4 .ui-icon { float: left; }
+  #trash .gallery h5 { display: none; }
+  </style>
+
+
 </head>
 <body>
   <div id="connections"></div>
@@ -14,11 +32,11 @@
 
   <div  style="display: inline;">
 
-    <canvas id="paper" width="400" height="500" style="float:left;">
+    <canvas id="paper" width="400" height="500" style="float:rigth;">
       Tu navegador debe soportar canvas
     </canvas>
 
-    <div style="width:100px;height:200px;border: 2px solid;float:left;"></div>
+    <div style="width:100px;height:200px;border: 2px solid;float:rigth;"></div>
   
   </div> 
 
@@ -38,17 +56,21 @@
 
     <div id="wrapper">
 	<div id="options">
-		<div id="drag1" class="drag"></div> <!-- end of drag1 -->
-		<div id="drag2" class="drag"></div> <!-- end of drag2 -->
-		<div id="drag3" class="drag"></div> <!-- end of drag3 -->
-		<div id="drag4" class="drag"></div> <!-- end of drag4 -->
-		<div id="drag5" class="drag"></div> <!-- end of drag5 -->
-		<div id="drag6" class="drag"></div> <!-- end of drag6 -->
+
+    <ul id="gallery">
+    		<li><div id="drag1" class="drag"></div></li> <!-- end of drag1 -->
+    		<li><div id="drag2" class="drag"></div></li> <!-- end of drag2 -->
+    		<li><div id="drag3" class="drag"></div></li> <!-- end of drag3 -->
+    		<li><div id="drag4" class="drag"></div></li> <!-- end of drag4 -->
+    		<li><div id="drag5" class="drag"></div></li> <!-- end of drag5 -->
+    		<li><div id="drag6" class="drag"></div></li> <!-- end of drag6 -->
+    </ul>    
 	</div><!-- end of options -->
-	<div id="frame">
-		
-		
-	</div><!-- end of frame -->
+	
+  <div id="trash" >
+    
+  </div>
+
 </div><!-- end of wrapper -->
 
 
